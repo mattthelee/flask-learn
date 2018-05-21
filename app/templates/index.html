@@ -1,16 +1,9 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Portfolio</title>
-        {% else %}
-        <title>No title provided for this portfolio</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-        {% for post in posts %}
-        <div> Hello {{post.author.username}} </div>
-        <div> {{post.body}} </div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Hello, {{ user.username }}!</h1>
+  {% for post in posts %}
+  <div> Hello {{post.author.username}} </div>
+  <div> {{post.body}} </div>
+  {% endfor %}
+{% endblock %}
