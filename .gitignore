@@ -2,3 +2,4 @@ app/__pycache__/*
 app/migrations/versions/*
 app/migrations/__pycache__/*
 *app.db
+*.log
